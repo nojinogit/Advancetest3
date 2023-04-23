@@ -109,11 +109,27 @@ tr:first-child{
 }
 
 .main__search--table th{
-    padding-right: 50px;
+    padding-right:50px;
+    white-space: nowrap;
 }
 
 .main__search--table td {
     padding-top: 10px;
+    padding-left: 10px;
+    white-space: nowrap;
+}
+
+.opinion{
+    max-width: 340px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.opinion:hover {
+    max-width: 340px;
+    overflow: visible;
+    white-space: normal;
 }
 
 #delete__submit {

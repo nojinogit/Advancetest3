@@ -17,14 +17,14 @@
                         <td>
                             <div id="input-name">
                                 <div class="input-name-item">
-                                    <input name="name1" value="{{old('name1')}}" wire:model="name1">
+                                    <input name="name1" value="{{old('name1')}}" wire:model.lazy="name1">
                                     <p class="input-name-item-example">例）山田</p>
                                     @if($errors->has('name1'))
                                     <p class="error">{{$errors->first('name1')}}</p>
                                 @endif
                                 </div>
                                 <div class="input-name-item">
-                                    <input name="name2" value="{{old('name2')}}" wire:model="name2">
+                                    <input name="name2" value="{{old('name2')}}" wire:model.lazy="name2">
                                     <p class="input-name-item-example">例）太郎</p>
                                     @if($errors->has('name2'))
                                     <p class="error">{{$errors->first('name2')}}</p>
@@ -54,7 +54,7 @@
                         </th>
                         <td>
                             <div>
-                                <input  class="main__form--table-input"  name="email" value="{{old('email')}}"  wire:model="email">
+                                <input  class="main__form--table-input"  name="email" value="{{old('email')}}"  wire:model.lazy="email">
                             </div>
                         </td>
                     </tr>
@@ -80,7 +80,7 @@
                         </th>
                         <td>
                             <div>
-                                <input class="main__form--table-input" name="postcode" value="{{old('postcode')}}" onKeyUp="AjaxZip3.zip2addr(this,'','address','address');" wire:model="postcode" >
+                                <input class="main__form--table-input" name="postcode" value="{{old('postcode')}}" onKeyUp="AjaxZip3.zip2addr(this,'','address','address');" wire:model.lazy="postcode" >
                             </div>
                         </td>
                     </tr>
@@ -106,7 +106,7 @@
                         </th>
                         <td>
                             <div>
-                                <input class="main__form--table-input" name="address" value="{{old('address')}}"  wire:model="address">
+                                <input class="main__form--table-input" name="address" value="{{old('address')}}"  wire:model.lazy="address">
                             </div>
                         </td>
                     </tr>
@@ -132,7 +132,7 @@
                         </th>
                         <td>
                             <div>
-                                <input class="main__form--table-input" name="building_name" value="{{old('building_name')}}"  wire:model="building_name">
+                                <input class="main__form--table-input" name="building_name" value="{{old('building_name')}}"  wire:model.lazy="building_name">
                             </div>
                         </td>
                     </tr>
@@ -158,7 +158,7 @@
                         </th>
                         <td>
                             <div class="main__form--table-example">
-                                <textarea name="opinion" value="{{old('opinion')}}"  wire:model="opinion"></textarea>
+                                <textarea name="opinion" wire:model.lazy="opinion">{{old('opinion')}}</textarea>
                                 @if($errors->has('opinion'))
                                     <p class="error">{{$errors->first('opinion')}}</p>
                                 @endif
@@ -168,7 +168,7 @@
                 </div>
             </table>
             <div  class="main__form--submit">
-                <input type="submit" value="確認">
+                <input type="button" onclick="submit();" value="確認">
             </div>
         </form>
     </div>

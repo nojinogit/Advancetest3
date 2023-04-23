@@ -107,9 +107,9 @@
     </div>
     @endisset
 </main>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 <script>
-const TextLimit = () => {
+/*const TextLimit = () => {
     let maxLength = 25;
     let limitedText = document.getElementsByClassName('opinion');
     for (i = 0; i < limitedText.length; i++) {
@@ -119,16 +119,6 @@ const TextLimit = () => {
     }
     }
     }
-TextLimit();
+TextLimit();*/
 
-/*$(function () {
-    $('.opinion').mouseover(function () {},
-    function () {
-        let maxLength = 25;
-        let limitedText = $(this).find('.opinion').html();
-        console.log($limitedText);
-        if (limitedText.length > maxLength) {
-        $(this).find('.opinion').html() = limitedText.substr(0, maxLength) + '...';}
-    });
-});*/
 </script>

@@ -5,7 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 
 
-class ErrorCheck extends Component
+class Input extends Component
 {
     public $name1;
     public $name2;
@@ -62,7 +62,7 @@ class ErrorCheck extends Component
 
     public function render()
     {
-        return view('livewire.error-check');
+        return view('livewire.input');
     }
 }
 

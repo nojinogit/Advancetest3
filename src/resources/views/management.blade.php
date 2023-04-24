@@ -97,7 +97,10 @@
                         @endif
                     </td>
                     <td>{{$contact['email']}}</td>
-                    <td class="opinion">{{$contact['opinion']}}</td>
+                    <td class="opinion">
+                        <span class="opinion-limit">{{$contact['opinion']}}</span>
+                        <span class="opinion-origin none">{{$contact['opinion']}}</span>
+                    </td>
                     <input type="hidden" name="id" value="{{$contact['id']}}">
                     <td><input type="submit" value="削除" id="delete__submit"></td>
                 </form>
@@ -108,17 +111,29 @@
     @endisset
 </main>
 
-<script>
-/*const TextLimit = () => {
-    let maxLength = 25;
-    let limitedText = document.getElementsByClassName('opinion');
-    for (i = 0; i < limitedText.length; i++) {
-    let originalText = document.getElementsByClassName('opinion')[i].innerHTML;
-    if (originalText.length > maxLength) {
-        document.getElementsByClassName('opinion')[i].innerHTML = originalText.substr(0, maxLength) + '...';
-    }
-    }
-    }
-TextLimit();*/
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+const TextLimit = () => {
+    let maxLength = 25;
+    let limitedText = document.getElementsByClassName('opinion-limit');
+    for (i = 0; i < limitedText.length; i++) {
+    let originalText = document.getElementsByClassName('opinion-limit')[i].innerHTML;
+    if (originalText.length > maxLength) {
+        document.getElementsByClassName('opinion-limit')[i].innerHTML = originalText.substr(0, maxLength) + '...';
+    }
+    }
+    }
+TextLimit();
+
+$(function() {
+
+    $('.opinion').hover(function(){
+        $(this).find('.opinion-limit').toggleClass('none');
+        $(this).find('.opinion-origin').toggleClass('none')},
+    function(){
+        $(this).find('.opinion-limit').toggleClass('none');
+        $(this).find('.opinion-origin').toggleClass('none')}
+    )
+});
 </script>

@@ -116,10 +116,9 @@ tr:first-child{
 .main__search--table td {
     padding-top: 10px;
     padding-left: 10px;
-    white-space: nowrap;
 }
 
-.opinion{
+/*.opinion{
     max-width: 340px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -129,6 +128,23 @@ tr:first-child{
 .opinion:hover {
     max-width: 340px;
     overflow: visible;
+    white-space: normal;
+}*/
+
+.none{
+    display: none;
+}
+
+.opinion{
+    max-width: 350px;
+}
+
+.opinion-limit {
+    white-space: nowrap;
+}
+
+.opinion-origin {
+    max-width: 350px;
     white-space: normal;
 }
 

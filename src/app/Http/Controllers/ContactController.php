@@ -9,8 +9,12 @@ use Illuminate\Pagination\Paginator;
 
 class ContactController extends Controller
 {
-    public function index(){
-        return view('index');
+    public function index1(){
+        return view('index1');
+    }
+
+    public function index2(){
+        return view('index2');
     }
 
     public function confirmation(ContactRequest $request){

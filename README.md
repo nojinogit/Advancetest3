@@ -1,7 +1,7 @@
-# Advancetest3
+# Advancetest
 
 お問い合わせ＆管理アプリ
-https://user-images.githubusercontent.com/127584258/233978341-257599a3-9e78-4207-9f08-3295248b376f.jpg
+![お問い合わせ](https://user-images.githubusercontent.com/127584258/233978341-257599a3-9e78-4207-9f08-3295248b376f.jpg)
 
 #作成の目的
 お問い合わせ内容受付と管理画面からの検索・確認をするため
